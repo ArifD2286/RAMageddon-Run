@@ -1,10 +1,17 @@
 [gd_scene format=3 uid="uid://d0bbvptonngxu"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_7cyb2"]
+[ext_resource type="Script" uid="uid://b6wyaa1al60ue" path="res://ram.gd" id="1_26crb"]
+[ext_resource type="Texture2D" uid="uid://bfkgk0oxjpcpk" path="res://assets/shook.jpg" id="2_bnm00"]
 
-[node name="StaticBody2D2" type="StaticBody2D" unique_id=1800044618]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7cyb2"]
+size = Vector2(80, 80)
+
+[node name="StaticBody2D2" type="AnimatableBody2D" unique_id=311829735]
+script = ExtResource("1_26crb")
+ram_textures = Array[Texture2D]([ExtResource("2_bnm00"), null])
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1056843]
 shape = SubResource("RectangleShape2D_7cyb2")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=259758899]
+scale = Vector2(0.09995191, 0.09995191)
